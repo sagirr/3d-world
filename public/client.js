@@ -1,13 +1,11 @@
 import * as THREE from 'https://threejs.org/build/three.module.js';
-import Stats from './jsm/libs/stats.module.js';
-import { OrbitControls } from './jsm/controls/OrbitControls.js';
+
+import { OrbitControls } from 'https://threejs.org/examples/jsm/controls/OrbitControls.js';
 
 
 const canvas = document.querySelector('.web-gl');
 
 // showing fps
-const stats = new Stats();
-document.body.appendChild(stats.domElement);
 
 // Scene Setup
 const scene = new THREE.Scene();
@@ -81,7 +79,7 @@ const render = ()=>{
 const animate = ()=>{
     requestAnimationFrame(animate);
     render();
-    stats.update();
+    
 }
 animate();
 
